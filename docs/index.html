@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Analitycy.host - Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    let year = new Date().getFullYear()
+    window.$docsify = {
+      loadSidebar: true,
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      name: 'Analitycy.host - Docs',
+      repo: 'Analitycy-host/docs',
+      plugins: [
+        function(hook) {
+        var footer = [
+          '<hr/>',
+          '<footer>',
+          `<span>&copy; 2020 - ${year} <a class="text-light" href="https://analitycy.host/">Analitycy.host</a></span>`,
+          '</footer>'
+        ].join('');
+          
+        hook.afterEach(function(html) {
+          return html + footer;
+        });
+    }
+    ]
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+</html>
