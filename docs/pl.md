@@ -3,6 +3,6 @@
 ---
 
 * [Image-API](pl/iapi)
-* [Files.co.pl](pl/files)
-* [Files.co.pl API](pl/filesapi)
+* [Wyslij.se](pl/files)
+* [Wyslij.se API](pl/filesapi)
 
